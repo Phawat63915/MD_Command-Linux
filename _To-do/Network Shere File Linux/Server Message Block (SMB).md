@@ -2,6 +2,18 @@
 
 [Samba Server Guide](https://help.ubuntu.com/community/Samba/SambaServerGuide?_ga=2.22781115.1053081430.1675660950-291376188.1671546043)
 
+
+**Check user and group**
+```bash
+id -u <username>
+id -g <groupname>
+```
+
+**Check list user**
+```bash
+pdbedit -L -v
+```
+
 # Install and Configure Samba
 
 ## 1. Overview
