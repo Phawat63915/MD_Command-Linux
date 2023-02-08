@@ -3,7 +3,7 @@
 [Samba Server Guide](https://help.ubuntu.com/community/Samba/SambaServerGuide?_ga=2.22781115.1053081430.1675660950-291376188.1671546043)
 
 
-**Check user and group**
+<!-- **Check user and group**
 ```bash
 id -u <username>
 id -g <groupname>
@@ -12,7 +12,7 @@ id -g <groupname>
 **Check list user**
 ```bash
 pdbedit -L -v
-```
+``` -->
 # Overview Install and Configure Samba
 เซิร์ฟเวอร์ไฟล์ Samba เปิดใช้งานการแชร์ไฟล์ระหว่างระบบปฏิบัติการต่างๆ ผ่านเครือข่าย ช่วยให้คุณเข้าถึงไฟล์เดสก์ท็อปจากแล็ปท็อปและแชร์ไฟล์กับผู้ใช้ Windows และ macOS
 
@@ -23,31 +23,38 @@ What you’ll learn
 - Share via local network & Network (LAN)
 
 Requirements for doing
-- Ubuntu 16.04 LTS or later
+- Linux Operating System
 - Local Area Network (LAN) to share files over
 
-### Ubuntu
+**Operating system list**
+- [Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9](#ubuntu-2204-lts-2004-lts-1804-lts-and-debian-11-10-9)
 
-Ubuntu Server
+### Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9
+
+Ubuntu Server & Desktop
 - 22.04 LTS (Hirsute Hippo) 
 - 20.04 LTS (Focal Fossa)
 - 18.04 LTS (Bionic Beaver)
-- 16.04 LTS (Xenial Xerus)
+
+Debian Server & Desktop
+- 11 (Bullseye)
+- 10 (Buster)
+- 9 (Stretch)
 
 #### 2. Installing Samba
 
-To install Samba, we run:
+To install Samba, we run | ติดตั้ง:
 
 ```bash
 sudo apt update -y && sudo apt install samba -y
 ```
 
-We can check if the installation was successful by running:
+We can check if the installation was successful by running | เช็กว่า Samba ติดตั้งสำเร็จหรือไม่:
 ```bash
 whereis samba
 ```
 
-The following should be its output:
+The following should be its output | ผลลัพธ์ จากการพิม > `whereis samba`:
 ```log
 samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
 ```
@@ -79,8 +86,6 @@ At the bottom of the file, add the following lines:
 Then press `Ctrl-O` to save and `Ctrl-X` to exit from the nano text editor.
 
 What we’ve just added
-----
-
 - comment: A brief description of the share.
 - path: The directory of our share.
 - read only: Permission to modify the contents of the share folder is only granted when the value of this directive is no.
