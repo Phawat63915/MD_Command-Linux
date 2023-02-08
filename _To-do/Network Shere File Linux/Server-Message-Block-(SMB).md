@@ -26,7 +26,7 @@ Requirements for doing
 - Linux Operating System
 - Local Area Network (LAN) to share files over -->
 
-**Operating system list** 
+#### Operating system list
 
 > **Note:** **Client** คือ เครื่องที่จะเข้าถึงไฟล์ที่แชร์ด้วยการ mount ไปยัง **Server** คือ เครื่องที่จะแชร์ไฟล์
 
