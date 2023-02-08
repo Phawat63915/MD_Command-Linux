@@ -17,29 +17,24 @@ pdbedit -L -v
 # Install and Configure Samba
 
 ## 1. Overview
-A Samba file server enables file sharing across different operating systems over a network. It lets you access your desktop files from a laptop and share files with Windows and macOS users.
+เซิร์ฟเวอร์ไฟล์ Samba เปิดใช้งานการแชร์ไฟล์ระหว่างระบบปฏิบัติการต่างๆ ผ่านเครือข่าย ช่วยให้คุณเข้าถึงไฟล์เดสก์ท็อปจากแล็ปท็อปและแชร์ไฟล์กับผู้ใช้ Windows และ macOS
 
-This guide covers the installation and configuration of Samba on Ubuntu.
+คู่มือนี้ครอบคลุมการติดตั้งและกำหนดค่า Samba บน Ubuntu
 
 What you’ll learn
-    - How to set up a Samba file server
-    - How to share files across a local network
+    - Make Server File Shrer with Samba
+    - Share via local network & Network (LAN)
 
-What you’ll need
-    - Ubuntu 16.04 LTS
-    - A Local Area Network (LAN) to share files over
-
-If you have everything ready, let’s dive straight into the installation process on the next step!
-
-Originally authored by Aden Padilla.
+Requirements for doing
+    - Ubuntu 16.04 LTS or later
+    - Local Area Network (LAN) to share files over
 
 ## 2. Installing Samba
 
 To install Samba, we run:
 
 ```bash
-sudo apt update
-sudo apt install samba
+sudo apt update -y && sudo apt install samba -y
 ```
 
 We can check if the installation was successful by running:
