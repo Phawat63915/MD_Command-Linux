@@ -13,18 +13,7 @@ id -g <groupname>
 ```bash
 pdbedit -L -v
 ```
-
-# Ubuntu
-
-[Ubuntu Server](https://ubuntu.com/about/release-cycle) (ทดสอบแว้ว)
-- 22.04 LTS (Hirsute Hippo) 
-- 20.04 LTS (Focal Fossa)
-- 18.04 LTS (Bionic Beaver)
-- 16.04 LTS (Xenial Xerus)
-
-## Install and Configure Samba
-
-### 1. Overview
+# Overview Install and Configure Samba
 เซิร์ฟเวอร์ไฟล์ Samba เปิดใช้งานการแชร์ไฟล์ระหว่างระบบปฏิบัติการต่างๆ ผ่านเครือข่าย ช่วยให้คุณเข้าถึงไฟล์เดสก์ท็อปจากแล็ปท็อปและแชร์ไฟล์กับผู้ใช้ Windows และ macOS
 
 คู่มือนี้ครอบคลุมการติดตั้งและกำหนดค่า Samba บน Ubuntu
@@ -37,7 +26,15 @@ Requirements for doing
 - Ubuntu 16.04 LTS or later
 - Local Area Network (LAN) to share files over
 
-### 2. Installing Samba
+### Ubuntu
+
+[Ubuntu Server](https://ubuntu.com/about/release-cycle) (ทดสอบแว้ว)
+- 22.04 LTS (Hirsute Hippo) 
+- 20.04 LTS (Focal Fossa)
+- 18.04 LTS (Bionic Beaver)
+- 16.04 LTS (Xenial Xerus)
+
+#### 2. Installing Samba
 
 To install Samba, we run:
 
@@ -55,7 +52,7 @@ The following should be its output:
 samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
 ```
 
-### 3. Setting up Samba
+#### 3. Setting up Samba
 
 Now that Samba is installed, we need to create a directory for it to share:
 ```bash
@@ -101,7 +98,7 @@ Update the firewall rules to allow Samba traffic:
 sudo ufw allow samba
 ```
 
-### 4. Setting up User Accounts and Connecting to Share
+#### 4. Setting up User Accounts and Connecting to Share
 
 Since Samba doesn’t use the system account password, we need to set up a Samba password for our user account:
 
