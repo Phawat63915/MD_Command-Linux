@@ -17,10 +17,10 @@ pdbedit -L -v
 # Ubuntu
 
 Ubuntu Server [Ubuntu release support timeline](https://ubuntu.com/about/release-cycle)
-- 22.04 LTS (Hirsute Hippo)
-- 20.04 LTS (Focal Fossa)
-- 18.04 LTS (Bionic Beaver)
-- 16.04 LTS (Xenial Xerus)
+- 22.04 LTS (Hirsute Hippo) <b style="color: green">OK</b>
+- 20.04 LTS (Focal Fossa) <b style="color: green">OK</b>
+- 18.04 LTS (Bionic Beaver) <b style="color: green">OK</b>
+- 16.04 LTS (Xenial Xerus) <b style="color: green">OK</b>
 
 ## Install and Configure Samba
 
