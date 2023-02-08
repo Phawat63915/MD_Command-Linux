@@ -16,13 +16,13 @@ pdbedit -L -v
 
 # Ubuntu
 
-เวอร์ชั้นที่สามารถทำได้
+[Ubuntu release support timeline](https://ubuntu.com/about/release-cycle)
 
-Ubuntu
-- 22.04 LTS
-- 20.04 LTS
-- 18.04 LTS
-- 16.04 LTS
+Ubuntu Server (Version can Samba Server setup)
+- 22.04 LTS (Hirsute Hippo)
+- 20.04 LTS (Focal Fossa)
+- 18.04 LTS (Bionic Beaver)
+- 16.04 LTS (Xenial Xerus)
 
 ## Install and Configure Samba
 
