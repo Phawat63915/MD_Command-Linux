@@ -28,7 +28,7 @@ Requirements for doing
 
 ### Ubuntu
 
-[Ubuntu Server](https://ubuntu.com/about/release-cycle)
+Ubuntu Server
 - 22.04 LTS (Hirsute Hippo) 
 - 20.04 LTS (Focal Fossa)
 - 18.04 LTS (Bionic Beaver)
