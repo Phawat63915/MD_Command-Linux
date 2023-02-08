@@ -126,6 +126,8 @@ sudo ufw allow samba
 
 #### 3. Setting up User Accounts and Connecting to Share
 
+> **Note:** ip-address is the Samba ของเซิร์ฟเวอร์ Samba และ sambashare คือชื่อของการแชร์
+
 เนื่องจาก Samba ไม่ใช้รหัสผ่านบัญชีระบบ เราจำเป็นต้องตั้งรหัสผ่าน Samba สำหรับบัญชีผู้ใช้ของเรา
 ```bash
 sudo smbpasswd -a username
@@ -144,4 +146,12 @@ Connecting to Share
 
 ### Mount Shere FIle (Client)
 
-> **Note:** ip-address is the Samba ของเซิร์ฟเวอร์ Samba และ sambashare คือชื่อของการแชร์
+เปิดไฟล์เพื่อแก้ไข
+```bash
+sudo nano /etc/fstab
+```
+
+เพิ่มบรรทัดนี้ลงไปในไฟล์
+```
+//ip-address/sambashare /home/username/sambashare cifs username=username,password=password,uid=1000,gid=1000,iocharset=utf8 0 0
+```
