@@ -34,6 +34,10 @@ Requirements for doing
     - [Client](#Shere-FIle-Client)
     - [Server](#shere-file-server)
 
+
+
+
+
 # Installation Manual
 ## Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9
 Ubuntu Server & Desktop
@@ -46,42 +50,47 @@ Debian Server & Desktop
 - 10 (Buster)
 - 9 (Stretch)
 
+
 ### Shere FIle (Server)
 
 #### 1. Installing Samba
 
-To install Samba, we run | ติดตั้ง:
+ติดตั้ง Samba เราเรียกใช้คำสั่ง
+
 
 ```bash
 sudo apt update -y && sudo apt install samba -y
 ```
 
-We can check if the installation was successful by running | เช็กว่า Samba ติดตั้งสำเร็จหรือไม่:
+
+ตรวจสอบว่า Samba การติดตั้งสำเร็จหรือไม่โดยเรียกใช้
 ```bash
 whereis samba
 ```
 
-The following should be its output | ผลลัพธ์ จากการพิม > `whereis samba`:
+
+_OUTPUT: ผลลัพธ์ที่ได้จะเป็น_ 👇 > `whereis samba`:
 ```log
 samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
 ```
 
+
+
 #### 2. Setting up Samba
 
-Now that Samba is installed, we need to create a directory for it to share:
+เมื่อติดตั้ง Samba แล้ว เราต้องสร้างไดเร็กทอรีสำหรับแชร์
 ```bash
 mkdir /home/<username>/sambashare/
 ```
+คำสั่งด้านบนสร้างโฟลเดอร์ใหม่ `sambashare` ในโฮมไดเร็กตอรี่ของเรา ซึ่งเราจะแบ่งปันในภายหลัง
 
-The command above creates a new folder `sambashare` in our home directory which we will share later.
+ไฟล์การกำหนดค่าสำหรับ Samba อยู่ที่ `/etc/samba/smb.conf` หากต้องการเพิ่มไดเร็กทอรีใหม่เป็นการแชร์ เราแก้ไขไฟล์โดยเรียกใช้:
 
-The configuration file for Samba is located at `/etc/samba/smb.conf`. To add the new directory as a share, we edit the file by running:
 
 ```bash
 sudo nano /etc/samba/smb.conf
 ```
-
-At the bottom of the file, add the following lines:
+ที่ด้านล่างของไฟล์ ให้เพิ่มบรรทัดใหม่ ที่ `/etc/samba/smb.conf`
 ```smb.conf
 [sambashare]
     comment = Samba on Ubuntu
@@ -90,39 +99,41 @@ At the bottom of the file, add the following lines:
     browsable = yes
 ```
 
-Then press `Ctrl-O` to save and `Ctrl-X` to exit from the nano text editor.
+จากนั้นกด <kbd>Ctrl</kbd> <kbd>O</kbd> เพื่อบันทึกและ <kbd>Ctrl</kbd> <kbd>X</kbd> เพื่อออกจากโปรแกรมแก้ไขข้อความนาโน
 
 What we’ve just added
-- **comment**: A brief description of the share.
-- **path**: The directory of our share.
-- **read only**: Permission to modify the contents of the share folder is only granted when the value of this directive is no.
-- **browsable**: When set to yes, file managers such as Ubuntu’s default file manager will list this share under “Network” (it could also appear as browseable).
+- **comment**: คำอธิบายสั้น ๆ ของส่วนแบ่ง
+- **path**: ไดเรกทอรีของการแบ่งปันของเรา
+- **read only**: การอนุญาตให้แก้ไขเนื้อหาของโฟลเดอร์ที่ใช้ร่วมกันจะได้รับอนุญาตก็ต่อเมื่อค่าของคำสั่งนี้ไม่ใช่
+- **browsable**: เมื่อตั้งค่าเป็นใช่ ตัวจัดการไฟล์เช่นตัวจัดการไฟล์เริ่มต้นของ Ubuntu จะแสดงรายการการแชร์นี้ภายใต้ "เครือข่าย" (อาจปรากฏเป็นเรียกดูได้)
 
-Now that we have our new share configured, save it and restart Samba for it to take effect:
 
+ตอนนี้เราได้กำหนดค่าการแชร์ใหม่แล้ว ให้บันทึกและรีสตาร์ท Samba เพื่อให้มีผล
 ```bash
 sudo service smbd restart
 ```
 
-Update the firewall rules to allow Samba traffic:
+
+อัปเดตกฎไฟร์วอลล์เพื่ออนุญาตการรับส่งข้อมูลของ Samba:
 ```bash
 sudo ufw allow samba
 ```
 
+
+
 #### 3. Setting up User Accounts and Connecting to Share
 
-Since Samba doesn’t use the system account password, we need to set up a Samba password for our user account:
-
+เนื่องจาก Samba ไม่ใช้รหัสผ่านบัญชีระบบ เราจำเป็นต้องตั้งรหัสผ่าน Samba สำหรับบัญชีผู้ใช้ของเรา
 ```bash
 sudo smbpasswd -a username
 ```
 
+
 Connecting to Share
 
-On Windows, open up File Manager and edit the file path to:
-
+ใน Windows ให้เปิด File Manager และแก้ไขพาธไฟล์เป็น
 ```
 \\ip-address\sambashare
 ```
 
-> **Note:** ip-address is the Samba server IP address and sambashare is the name of the share.
+> **Note:** ip-address is the Samba ของเซิร์ฟเวอร์ Samba และ sambashare คือชื่อของการแชร์
