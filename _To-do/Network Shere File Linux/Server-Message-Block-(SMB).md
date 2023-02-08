@@ -51,6 +51,9 @@ Debian Server & Desktop
 - 9 (Stretch)
 
 
+
+
+
 ### Shere FIle (Server)
 
 #### 1. Installing Samba
@@ -135,5 +138,10 @@ Connecting to Share
 ```
 \\ip-address\sambashare
 ```
+
+
+
+
+### Mount Shere FIle (Client)
 
 > **Note:** ip-address is the Samba ของเซิร์ฟเวอร์ Samba และ sambashare คือชื่อของการแชร์
