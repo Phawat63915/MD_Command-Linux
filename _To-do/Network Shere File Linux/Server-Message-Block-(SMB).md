@@ -19,7 +19,7 @@ pdbedit -L -v
 คู่มือนี้ครอบคลุมการติดตั้งและกำหนดค่า Samba บน Ubuntu
 
 What you’ll learn
-- Make Server File Shrer with Samba
+- Make Server File Shrer with Samba Server & Client
 - Share via local network & Network (LAN)
 
 Requirements for doing
@@ -27,10 +27,15 @@ Requirements for doing
 - Local Area Network (LAN) to share files over
 
 **Operating system list**
-- [Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9](#ubuntu-2204-lts-2004-lts-1804-lts-and-debian-11-10-9)
 
-### Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9
+> **Note:** **Server** คือ เครื่องที่จะแชร์ไฟล์ และ **Client** คือ เครื่องที่จะเข้าถึงไฟล์ที่แชร์ หรือ mount ไฟล์จาก Server ซึ่งทำที่ Client
 
+- [Ubuntu & Debian](#ubuntu-2204-lts-2004-lts-1804-lts-and-debian-11-10-9)
+    - [Client](#Shere-FIle-Client)
+    - [Server](#Shere-FIle-Server)
+
+# Installation Manual
+## Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9
 Ubuntu Server & Desktop
 - 22.04 LTS (Hirsute Hippo) 
 - 20.04 LTS (Focal Fossa)
@@ -41,7 +46,9 @@ Debian Server & Desktop
 - 10 (Buster)
 - 9 (Stretch)
 
-#### 2. Installing Samba
+### Shere FIle Server
+
+#### 1. Installing Samba
 
 To install Samba, we run | ติดตั้ง:
 
@@ -59,7 +66,7 @@ The following should be its output | ผลลัพธ์ จากการพ
 samba: /usr/sbin/samba /usr/lib/samba /etc/samba /usr/share/samba /usr/share/man/man7/samba.7.gz /usr/share/man/man8/samba.8.gz
 ```
 
-#### 3. Setting up Samba
+#### 2. Setting up Samba
 
 Now that Samba is installed, we need to create a directory for it to share:
 ```bash
@@ -103,7 +110,7 @@ Update the firewall rules to allow Samba traffic:
 sudo ufw allow samba
 ```
 
-#### 4. Setting up User Accounts and Connecting to Share
+#### 3. Setting up User Accounts and Connecting to Share
 
 Since Samba doesn’t use the system account password, we need to set up a Samba password for our user account:
 
