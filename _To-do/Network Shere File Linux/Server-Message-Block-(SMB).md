@@ -93,11 +93,10 @@ At the bottom of the file, add the following lines:
 Then press `Ctrl-O` to save and `Ctrl-X` to exit from the nano text editor.
 
 What we’ve just added
-- comment: A brief description of the share.
-- path: The directory of our share.
-- read only: Permission to modify the contents of the share folder is only granted when the value of this directive is no.
-
-- browsable: When set to yes, file managers such as Ubuntu’s default file manager will list this share under “Network” (it could also appear as browseable).
+- **comment**: A brief description of the share.
+- **path**: The directory of our share.
+- **read only**: Permission to modify the contents of the share folder is only granted when the value of this directive is no.
+- **browsable**: When set to yes, file managers such as Ubuntu’s default file manager will list this share under “Network” (it could also appear as browseable).
 
 Now that we have our new share configured, save it and restart Samba for it to take effect:
 
