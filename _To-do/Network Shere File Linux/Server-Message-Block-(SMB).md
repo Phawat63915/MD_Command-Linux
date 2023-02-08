@@ -18,13 +18,13 @@ pdbedit -L -v
 
 คู่มือนี้ครอบคลุมการติดตั้งและกำหนดค่า Samba บน Ubuntu
 
-What you’ll learn
+<!-- What you’ll learn
 - Make Server File Shrer with Samba Server & Client
 - Share via local network & Network (LAN)
 
 Requirements for doing
 - Linux Operating System
-- Local Area Network (LAN) to share files over
+- Local Area Network (LAN) to share files over -->
 
 **Operating system list**
 
@@ -32,7 +32,7 @@ Requirements for doing
 
 - [Ubuntu & Debian](#ubuntu-2204-lts-2004-lts-1804-lts-and-debian-11-10-9)
     - [Client](#Shere-FIle-Client)
-    - [Server](#Shere-FIle-Server)
+    - [Server](#shere-file-server)
 
 # Installation Manual
 ## Ubuntu 22.04 LTS, 20.04 LTS, 18.04 LTS and Debian 11, 10, 9
@@ -46,7 +46,7 @@ Debian Server & Desktop
 - 10 (Buster)
 - 9 (Stretch)
 
-### Shere FIle Server
+### Shere FIle (Server)
 
 #### 1. Installing Samba
 
