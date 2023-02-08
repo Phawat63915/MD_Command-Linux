@@ -16,9 +16,7 @@ pdbedit -L -v
 
 # Ubuntu
 
-[Ubuntu release support timeline](https://ubuntu.com/about/release-cycle)
-
-Ubuntu Server (Version can Samba Server setup)
+Ubuntu Server [Ubuntu release support timeline](https://ubuntu.com/about/release-cycle)
 - 22.04 LTS (Hirsute Hippo)
 - 20.04 LTS (Focal Fossa)
 - 18.04 LTS (Bionic Beaver)
