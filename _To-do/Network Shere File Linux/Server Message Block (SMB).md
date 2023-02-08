@@ -22,12 +22,12 @@ pdbedit -L -v
 คู่มือนี้ครอบคลุมการติดตั้งและกำหนดค่า Samba บน Ubuntu
 
 What you’ll learn
-    - Make Server File Shrer with Samba
-    - Share via local network & Network (LAN)
+- Make Server File Shrer with Samba
+- Share via local network & Network (LAN)
 
 Requirements for doing
-    - Ubuntu 16.04 LTS or later
-    - Local Area Network (LAN) to share files over
+- Ubuntu 16.04 LTS or later
+- Local Area Network (LAN) to share files over
 
 ## 2. Installing Samba
 
