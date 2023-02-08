@@ -16,7 +16,7 @@ pdbedit -L -v
 
 # Ubuntu
 
-Ubuntu Server [Ubuntu release support timeline](https://ubuntu.com/about/release-cycle) คู่ใช้ได้กับ
+[Ubuntu Server](https://ubuntu.com/about/release-cycle) (ทดสอบแว้ว)
 - 22.04 LTS (Hirsute Hippo) 
 - 20.04 LTS (Focal Fossa)
 - 18.04 LTS (Bionic Beaver)
