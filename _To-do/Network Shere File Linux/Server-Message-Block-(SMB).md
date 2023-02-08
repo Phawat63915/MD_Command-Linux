@@ -151,7 +151,12 @@ Connecting to Share
 sudo nano /etc/fstab
 ```
 
-เพิ่มบรรทัดนี้ลงไปในไฟล์
+เพิ่มบรรทัดนี้ลงไปในไฟล์ `//ip-address/sambashare /home/username/sambashare cifs username=<username>,password=<password>,uid=1000,gid=1000,iocharset=utf8 0 0`
 ```
-//ip-address/sambashare /home/username/sambashare cifs username=username,password=password,uid=1000,gid=1000,iocharset=utf8 0 0
+//192.168.56.51/sambashare /root/sambashare cifs username=phawat,password=JKHWI@NI#@#_-#&,uid=1000,gid=1000,iocharset=utf8 0 0
+```
+
+reboot เพื่อให้มีผล
+```bash
+sudo reboot
 ```
