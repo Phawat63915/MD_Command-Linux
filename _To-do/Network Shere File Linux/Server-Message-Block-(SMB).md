@@ -31,7 +31,7 @@ Requirements for doing
 > **Note:** **Client** คือ เครื่องที่จะเข้าถึงไฟล์ที่แชร์ด้วยการ mount ไปยัง **Server** คือ เครื่องที่จะแชร์ไฟล์
 
 - [Ubuntu & Debian](#ubuntu-2204-lts-2004-lts-1804-lts-and-debian-11-10-9)
-    - [Client](#Shere-FIle-Client)
+    - [Client](#mount-shere-file-client)
     - [Server](#shere-file-server)
 
 
